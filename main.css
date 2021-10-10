@@ -1,0 +1,281 @@
+/* @something SECTION */
+
+/* 
+
+    @import 'variables.css';
+    You can use this but this but it will download the main css then the variables css
+    It prevents files from being downloaded concurently
+    With link rel they can be both downloaded concurently
+
+*/
+/* :root & html both represents the same things, :root has higher specificity */
+/* Using * to select all elements or all children of parrent or one element from all children of one parent */
+
+/* CSS Syntax SECTION */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+body {
+  background-color: var(--color-background-main);
+}
+
+h1[customAttribute] {
+  padding: 40px;
+  text-align: center;
+  letter-spacing: 30px;
+  word-spacing: 100px;
+  color: #ffffff;
+}
+
+/* CSS Selectors Section */
+
+/* 
+Universal selector: *
+Element Selector: p / input/ div / button
+Class Selector: .className
+Id Selector: #id
+Attribute Selector: 
+
+[attribute] - selecting for attribute
+[attribute=value] - selecting for attribute with value
+[attribute=~value] - selecting for attribute containing the word value
+[attribute|=value] - selecting for attribute starting with value or equal to value
+[attribute^=value] - selecting for attribute starting with value
+[attribute$=value] - selecting for attribute ending with value
+[attribute*=value] - selecting for attribute containing value as substring
+
+Pseudo Class Selector:
+    :link - a
+    :visited - a
+    :hover - a
+    :active - a, button
+    :focuse - input
+    :valid - input
+    :invalid - input
+    :required - form element
+    :optional - form element
+    :root 
+    :empty
+    :first-child, last-child, first-of-type, last-of-type, nth-child, nth-of-type, only-child, only-of-type, not
+    :target
+        - http://www.example.com/index.html#section2
+        <section id="section2>Example</section>
+
+Combinators Selector:
+    .class.class - class and class
+    .class .class - class withing class
+    div p - p inside div
+    div>p - p where the parent is a div
+    div+p - first p that is placed imedietly after div elements
+    div~p select p element that are preceded by a div element
+*/
+
+/* Collapsable Margins / Display / Position */
+
+.component {
+  height: 150px;
+  width: 150px;
+  border: 2px solid #ffffff;
+}
+
+.inside {
+  height: 100%;
+  background-color: #000000;
+}
+
+.component.top {
+  flex: 1 1 150px;
+  padding: 60px;
+  display: inline-block;
+  background-color: red;
+}
+
+.component.middle {
+  flex: 1 1 150px;
+  padding: 30px;
+  display: inline-block;
+  background-color: green;
+}
+
+.component.bottom {
+  padding: 15px;
+  display: inline-block;
+  background-color: blue;
+}
+
+.component-wrapper {
+  height: 300px;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Box model */
+
+.card {
+  max-width: 300px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-accent);
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+}
+
+.card-info {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0px 15px;
+  box-shadow: inset 0px -125px 70px rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+}
+
+.card-button {
+  font-size: 1em;
+  color: #ffffff;
+  padding: 10px 15px;
+  background-color: var(--color-accent);
+  border-radius: 50px;
+  border: none;
+  margin: 10px 0px 20px 0px;
+}
+
+.card-title {
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+/* Grid Section */
+.movies {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+  grid-gap: 50px;
+  padding: 50px 25px;
+}
+
+/* Media Queries Section */
+/*
+
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV. 
+
+*/
+
+@media screen and (max-width: 1024px) {
+  .movies {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .movies {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .movies {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pseudo-Classes Section */
+.card:hover {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.card:nth-child(2n):hover {
+  outline: 2px solid #ffffff;
+  outline-offset: 0px;
+}
+
+.card:last-child:hover {
+  outline: 2px solid cadetblue;
+  outline-offset: 10px;
+}
+
+/* Search Input */
+
+.searchbar {
+  display: grid;
+  place-items: center;
+  padding: 30px 0px;
+}
+
+#search-input {
+  background-color: var(--color-accent);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  padding: 10px 15px;
+  color: #ffffff;
+}
+
+/* Block */
+#search-input {
+  height: 30px;
+  width: 300px;
+  display: block;
+}
+
+/* Inline-block */
+#search-input {
+  height: 30px;
+  width: 300px;
+  display: inline-block;
+}
+
+/* Inline */
+#search-input {
+  height: 30px;
+  width: 300px;
+  display: inline;
+}
+
+#search-input::placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: bold;
+}
+
+#search-input:focus {
+  border: none;
+  width: 310px;
+}
+
+#search-input:hover {
+  width: 310px;
+}
+
+#search-input:focus-visible {
+  outline: none;
+}
+
+#search-input:active {
+  outline: 2px solid #ffffff;
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+< lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Fundamentals</title>
+
+    <!-- External Styling -->
+    <link rel="stylesheet" href="main.css" />
+    <!-- END -->
+
+    <!-- Other Import concurently -->
+    <link rel="stylesheet" href="variables.css" />
+    <link rel="stylesheet" href="utility.css" />
+
+    <!-- Favicon import -->
+    <!-- <link rel="icon" href="favicon.icon" /> -->
+
+    <!-- Link used for icons, stylesheets, load css on different media with media attribute,  -->
+  </head>
+    <!-- Internal Styling. In the beginning or end-->
+    <!-- <style>
+      p {
+        color: red !important;
+      }
+    </style> -->
+    <!-- Inline Styling -->
+    <!-- <p style="color: rgb(28, 197, 132)">This is a paragraph</p> -->
+
+    <!-- Styling an element -->
+    <h1 customAttribute="title">CSS Fundamentals Training Title Example</h1>
+
+    <!-- Box Model + Flex -->
+    <!-- <div class="card">
+      <img class="card-image" src="assets/Dune.jpg" alt="Dune" />
+      <div class="card-info">
+        <p class="card-title">Dune</p>
+        <button class="card-button">Book Ticket</button>
+      </div>
+    </div> -->
+
+    <!-- Search Input -->
+    <section class="searchbar">
+        <input id="search-input" type="text" placeholder="Please enter you input here">
+    </section>
+
+    <!-- Collapsable Margins / Display / Position-->
+    <div class="component-wrapper">
+        <div class="component top"><div class="inside"></div></div>
+        <div class="component middle"><div class="inside"></div></div>
+        <div class="component bottom"><div class="inside"></div></div>
+    </div>
+
+    <!-- Grid -->
+    <section class="movies">
+          <div class="card movie-trending">
+            <img class="card-image" src="assets/Dune.jpg" alt="Dune" />
+            <div class="card-info">
+              <p class="card-title">Dune</p>
+              <button class="card-button">Book Ticket</button>
+            </div>
+          </div>
+          <div class="card unread">
+            <img class="card-image" src="assets/Interstellar.jpg" alt="Interstellar" />
+            <div class="card-info">
+              <p class="card-title">Interstellar</p>
+              <button class="card-button">Book Ticket</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/Goodfellas.jpg" alt="Goodfellas" />
+            <div class="card-info">
+              <p class="card-title">Goodfellas</p>
+              <button class="card-button">Book Ticket</button>
+            </div>
+          </div>
+          <div class="card unread">
+            <img class="card-image" src="assets/Inception.jpg" alt="Inception" />
+            <div class="card-info">
+              <p class="card-title">Inception</p>
+              <button class="card-button">Book Ticket</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/GodFather_1.jpg" alt="GodFather 1" />
+            <div class="card-info">
+              <p class="card-title">GodFather Part 1</p>
+              <button class="card-button">Book Ticket</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/Jocker.jpg" alt="Jocker" />
+            <div class="card-info">
+              <p class="card-title">Jocker</p>
+              <button class="card-button">Book Ticket</button>
+            </div>
+          </div>
+          <div class="card unread">
+            <img class="card-image" src="assets/Matrix.jpg" alt="Matrix" />
+            <div class="card-info">
+              <p class="card-title">Matrix</p>
+              <button class="card-button">Book Ticket</button>
+            </div>
+          </div>
+          <div class="card">
+            <img class="card-image" src="assets/GodFather_2.jpg" alt="GodFather 2" />
+            <div class="card-info">
+              <p class="card-title">GodFather Part 2</p>
+              <button class="card-button">Book Ticket</button>
+            </div>
+          </div>
+    </section>
+    <script src="scripts/search.js" defer></script>
+    <script src="scripts//cardScripts.js" defer></script>
+  </body>
+</html>
