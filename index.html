@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-< lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,11 +13,6 @@
     <!-- Other Import concurently -->
     <link rel="stylesheet" href="variables.css" />
     <link rel="stylesheet" href="utility.css" />
-
-    <!-- Favicon import -->
-    <!-- <link rel="icon" href="favicon.icon" /> -->
-
-    <!-- Link used for icons, stylesheets, load css on different media with media attribute,  -->
   </head>
     <!-- Internal Styling. In the beginning or end-->
     <!-- <style>
@@ -29,27 +24,20 @@
     <!-- <p style="color: rgb(28, 197, 132)">This is a paragraph</p> -->
 
     <!-- Styling an element -->
-    <h1 customAttribute="title">CSS Fundamentals Training Title Example</h1>
-
-    <!-- Box Model + Flex -->
-    <!-- <div class="card">
-      <img class="card-image" src="assets/Dune.jpg" alt="Dune" />
-      <div class="card-info">
-        <p class="card-title">Dune</p>
-        <button class="card-button">Book Ticket</button>
-      </div>
-    </div> -->
+    <header>
+        <h1>CSS Fundamentals Training</h1>
+    </header>
 
     <!-- Search Input -->
     <section class="searchbar">
-        <input id="search-input" type="text" placeholder="Please enter you input here">
+        <input id="search-input" type="search" placeholder="Please enter you input here" required>
     </section>
 
     <!-- Collapsable Margins / Display / Position-->
-    <div class="component-wrapper">
-        <div class="component top"><div class="inside"></div></div>
-        <div class="component middle"><div class="inside"></div></div>
-        <div class="component bottom"><div class="inside"></div></div>
+    <div class="containers-wrapper">
+        <div class="container first">Content</div>
+        <div class="container second">Content</div>
+        <div class="container third">Content</div>
     </div>
 
     <!-- Grid -->
@@ -110,6 +98,12 @@
               <button class="card-button">Book Ticket</button>
             </div>
           </div>
+    </section>
+    <section>
+        <div class="end-message-wrapper">
+            <p class="end-message">We are near the end</p>
+        </div>
+            
     </section>
     <script src="scripts/search.js" defer></script>
     <script src="scripts//cardScripts.js" defer></script>
