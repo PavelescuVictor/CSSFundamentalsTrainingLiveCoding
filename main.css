@@ -231,9 +231,6 @@ Combinators Selector:
 .card {
   max-width: 300px;
   min-width: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: var(--color-accent);
   border-radius: 20px;
   overflow: hidden;
@@ -241,6 +238,7 @@ Combinators Selector:
 }
 
 .card-image {
+  display: block;
   width: 100%;
 }
 
