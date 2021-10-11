@@ -82,12 +82,12 @@ Combinators Selector:
 
 /* Block */
 
-.containers-wrapper {
+/* .containers-wrapper {
   margin: auto;
   width: fit-content;
 }
 
-/* .container {
+.container {
   height: 150px;
   width: 150px;
   border: 5px solid #f7cbbb;
@@ -348,6 +348,7 @@ Combinators Selector:
   width: fit-content;
   margin: auto;
   position: relative;
+  margin: 30px auto;
 }
 
 #search-input {
